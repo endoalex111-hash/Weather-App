@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* Glass container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 25px;
+    width: 450px;
+    max-width: 90%;
+    min-height: 50%;
+    color: white;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.container__input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: .3s ease;
+}
+
+input:hover,
+input:focus {
+    outline: 2px solid #5c80a0;
+}
+
+/* Buttons */
+.container__buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+button:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* Weather Display */
+#weatherDisplay {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+}
+
+.container__location-data {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    width: 100%;
+}
+
+.container__weather-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.weather-icon {
+    width: 75px;
+    height: 75px;
+}
+
+/* Hourly Forecast */
+#hourlyDisplay {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.hour-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    min-height: 120px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Scrollbar */
+#hourlyDisplay {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.5) rgba(255,255,255,0.1);
+    scroll-behavior: smooth;
+}
+
+#hourlyDisplay::-webkit-scrollbar {
+    height: 10px;
+}
+
+#hourlyDisplay::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+#hourlyDisplay::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.6),
+        rgba(255,255,255,0.2)
+    );
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+#hourlyDisplay::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.9),
+        rgba(255, 255, 255, 0.4)
+    );
+    box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 17px;
+    }
+
+    .hour-card {
+        min-width: 75px;
+        font-size: 15px;
+    }
+
+    .weather-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    #hourlyDisplay::-webkit-scrollbar {
+        height: 4px;
+    }
+}
+
