@@ -111,7 +111,16 @@ main/
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under a **Custom Non-Commercial License**.
+
+* ✅ Free for personal and educational use
+* ❌ Commercial use is strictly prohibited
+* ❌ Use of the included API key is not allowed
+* 📩 You must contact the author for commercial permissions
+
+For full details, see the [LICENSE](LICENSE) file.
+
+📧 Contact: [endoalex111@gmail.com](mailto:endoalex111@gmail.com)
 
 ---
 
